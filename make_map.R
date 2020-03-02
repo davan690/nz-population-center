@@ -117,8 +117,8 @@ register_google(key = google_key)
 nz_map <- get_map(location = c(173.2, -40.8, 176, -38))
 
 ggmap(nz_map) +
-  geom_point(data=points,aes(x=lon,y=lat),alpha=0.9,size=2,color="red") +
-  geom_text(data=points,aes(label=label),hjust=-0.2, vjust=0.4,size=3,fontface='bold')+ 
+  geom_point(data=points,aes(x=lon,y=lat),alpha=0.9,size=2.4,color="red") +
+  geom_text(data=points,aes(label=label),hjust=-0.3, vjust=0.4,size=3,fontface='bold')+ 
   ggthemes::theme_fivethirtyeight() +
   theme(legend.position='None',
         panel.grid.major = element_blank(),
@@ -130,7 +130,7 @@ ggmap(nz_map) +
   labs(title="Population Weighted Center of New Zealand",
        subtitle = "Annual average movement of 1.28 km",
        caption = "Source: Stats NZ Census Data & Geographic Data Service")
-ggsave("map.png",width = 8.4, height = 9)
+ggsave("map1.png",width = 8.4, height = 9)
 
 # -----------------------
 # Interactive Map
